@@ -4,16 +4,19 @@
 
 {% block page_title %}{{ name }}{% endblock %}
 
-{% block page_description %}{{ name }} by {{ author }}{% endblock %}
+{% block page_description %} {{ name }} {% endblock %}
 
 {% block content %}
   <article class="container">
     <div class="row">
       <div class="col-sm-4">
-          <img src="../img/members/{{ image }}" alt="" class="img-fluid mb-4">
+          <img src="../img/members/{{ image }}" class="img-fluid mb-2">
+          <p class="caption">{{ name }} was born in {{ birthplace }}, on {{ birthdate }}</p>
       </div>
       <div class="col-sm-8">
           <h1>{{ name }}</h1>
+          <h5>{{ tenure }}</h5>
+          <h6>{{ instruments }}</h6>
           <p>{{ description | safe }}</p>
       </div>
     </div>
